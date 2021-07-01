@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Layout from '../src/App/Layout';
 
 const IndexPage = () => {
     return (
-        <div>
+        <Layout pageTitle={'Index Page'}>
             Hello Next.js ....
-        </div> 
+        </Layout> 
     )
 }
 
