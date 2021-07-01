@@ -1,0 +1,30 @@
+$screen-lg-min: 1200px;
+$screen-md-min: 992px;
+$screen-sm-min: 860px;
+//@ for form design
+$base: #007bff;
+$green: #2db662;
+$text: #555;
+$invalid: #E91E63;
+$width: 100%;
+$cubic: cubic-bezier(.64,.09,.08,1);
+
+@mixin cursorHand {
+      cursor: hand;
+      cursor: pointer;
+    }
+@mixin respond-to($media) {
+      // mobile
+      @if $media == sm {
+            @media only screen and (max-width: $screen-sm-min) { @content; }
+      }
+      // medium 
+      @else if $media == md {
+            @media only screen and (min-width: $screen-sm-min + 1) and (max-width: $screen-md-min - 1) { @content; }
+                  
+            }
+      // large
+      @else if $media == lg {
+            @media only screen and (min-width: $screen-lg-min) { @content; }
+      }
+      }
